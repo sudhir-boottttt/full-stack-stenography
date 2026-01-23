@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Steganography Software</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Steganography Software</h2>
+
+<section class="card">
+  <h3>Encode Message</h3>
+  <form onsubmit="event.preventDefault(); encode();">
+    <input type="file" id="encodeImage" accept="image/*" required><br><br>
+    <input type="text" id="message" placeholder="Enter secret message" required><br><br>
+    <button type="submit">Encode & Download</button>
+  </form>
+</section>
+
+<section class="card">
+  <h3>Decode Message</h3>
+  <form onsubmit="event.preventDefault(); decode();">
+    <input type="file" id="decodeImage" accept="image/*" required><br><br>
+    <button type="submit">Decode</button>
+  </form>
+
+  <p id="output"></p>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
