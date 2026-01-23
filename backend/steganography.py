@@ -74,3 +74,7 @@ def decode_image(image):
             break
 
     return data.replace(STOP_MARKER, "")
+
+@app.get("/")
+def root():
+    return {"status": "Steganography backend is running"}
